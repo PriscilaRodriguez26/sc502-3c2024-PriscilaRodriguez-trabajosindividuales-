@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #20354a;
+    background: #f4f9fd;
+    line-height: 1.65
+}
+
+.encabezado {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px max(5%, calc((100% - 1120px)/2));
+    box-shadow: 0 2px 15px #193b5d12
+}
+
+.marca {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #087bb4
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap
+}
+
+nav a {
+    color: #35526b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .2s
+}
+
+nav a:hover,
+nav a:focus {
+    color: #00a3cb
+}
+
+.bienvenida {
+    text-align: center;
+    padding: 65px 20px 45px;
+    background: linear-gradient(120deg, #e3f6ff, #f6fbff)
+}
+
+.etiqueta {
+    color: #168bb9;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    font-size: .75rem
+}
+
+.bienvenida h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 12px 0
+}
+
+.bienvenida p {
+    max-width: 600px;
+    margin: auto;
+    color: #587087
+}
+
+.perfil {
+    max-width: 1050px;
+    margin: 48px auto;
+    padding: 46px;
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px #1a5e8715
+}
+
+.avatar {
+    display: grid;
+    place-items: center;
+    flex: 0 0 215px;
+    height: 215px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #bdefff, #e7f7ff);
+    font-size: 5rem
+}
+
+.nombre-doctor {
+    color: #123d5e;
+    font-size: 2rem;
+    margin: 8px 0 0
+}
+
+.especialidad {
+    color: #087bb4;
+    font-weight: 700;
+    margin: 2px 0 16px
+}
+
+#descripcion-doctor {
+    color: #516b80;
+    max-width: 620px
+}
+
+.boton {
+    display: inline-block;
+    background: #087fb8;
+    color: white;
+    padding: 12px 27px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 12px;
+    transition: background .2s, transform .2s
+}
+
+.boton:hover,
+.boton:focus {
+    background: #075c89;
+    transform: translateY(-2px)
+}
+
+.opiniones {
+    text-align: center;
+    max-width: 1120px;
+    margin: 65px auto;
+    padding: 0 20px
+}
+
+.opiniones h2 {
+    font-size: 2rem;
+    margin: 8px 0 30px
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap
+}
+
+.tarjeta {
+    flex: 1 1 275px;
+    max-width: 360px;
+    text-align: left;
+    background: white;
+    border: 1px solid #dbeaf3;
+    border-radius: 17px;
+    padding: 28px;
+    margin: 4px;
+    box-shadow: 0 8px 22px #245a7c12
+}
+
+.tarjeta h3 {
+    margin: 7px 0
+}
+
+.tarjeta p {
+    color: #526b7e
+}
+
+.tarjeta time {
+    font-size: .86rem;
+    color: #688399
+}
+
+.estrellas {
+    color: #e7a93b;
+    letter-spacing: 3px
+}
+
+footer {
+    text-align: center;
+    background: #153c59;
+    color: white;
+    padding: 34px 18px;
+    margin-top: 65px
+}
+
+footer p {
+    margin: 6px
+}
+
+footer a {
+    color: #bcefff
+}
+
+footer small {
+    color: #c6d9e7
+}
+
+@media(max-width:700px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px
+    }
+
+    .perfil {
+        margin: 24px 15px;
+        padding: 28px 22px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px
+    }
+
+    .avatar {
+        flex-basis: auto;
+        width: 150px;
+        height: 150px;
+        font-size: 3.7rem
+    }
+
+    .opiniones {
+        margin-top: 45px
+    }
+
+    .tarjeta {
+        max-width: none
+    }
+}
